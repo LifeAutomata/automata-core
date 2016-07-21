@@ -63,7 +63,7 @@ Events are the core concept of Life Automata. There are ten built-in events:
 
 All plugins should prefix their events with the plugin name.
 
-## Device State
+## Thing State
 
 Device states should be an object. At the root level that object should only contain the following
 pre-defined boolean states:
@@ -97,10 +97,11 @@ Metrics must have the format:
 
 Units may be one of:
 
-- F (fahrenheit)
-- C (celsius)
-- Any standard metric units (m, cm, s, ms, etc)
-- Any unit of computer storage (mb, gb, etc)
+- `F` (fahrenheit)
+- `C` (celsius)
+- `percent`
+- Any SI units (`m`, `cm`, `s`, `ms`, etc)
+- Any unit of computer storage (`mb`, `gb`, etc)
 
 And a location object or array that contains one or more geometries in [GeoJSON](http://geojson.org/) format.
 
