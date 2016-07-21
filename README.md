@@ -48,7 +48,7 @@ for all installed moduled. As well as a job queue to ensure that automation even
 
 ## Events
 
-Events are the core concept of Life Automata. There are eight built-in events:
+Events are the core concept of Life Automata. There are ten built-in events:
 
 - `plugins-loaded`
 - `paused`
@@ -56,6 +56,8 @@ Events are the core concept of Life Automata. There are eight built-in events:
 - `shutdown`
 - `thing-added`
 - `thing-removed`
+- `thing-state-change-requested`
+- `thing-state-change-rejected`
 - `thing-state-changed`
 - `api-called`
 
@@ -84,7 +86,11 @@ Metrics must have the format:
 
 ```
 {
-  "value": integer,
+  "value": number,
+  "range": {
+    "maximum": number,
+    "minimum": number
+  }
   "units": string
 }
 ```
@@ -94,6 +100,7 @@ Units may be one of:
 - F (fahrenheit)
 - C (celsius)
 - Any standard metric units (m, cm, s, ms, etc)
+- Any unit of computer storage (mb, gb, etc)
 
 And a location object or array that contains one or more geometries in [GeoJSON](http://geojson.org/) format.
 
