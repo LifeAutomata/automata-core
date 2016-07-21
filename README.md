@@ -105,4 +105,4 @@ Units may be one of:
 
 And a location object or array that contains one or more geometries in [GeoJSON](http://geojson.org/) format.
 
-It may also have the object value `device_defined` which may contain device specific states.
+It may also have the object value `custom` which may contain thing specific states.
