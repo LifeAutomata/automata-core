@@ -103,6 +103,6 @@ Units may be one of:
 - Any SI units (`m`, `cm`, `s`, `ms`, etc)
 - Any unit of computer storage (`mb`, `gb`, etc)
 
-And a location object or array that contains one or more geometries in [GeoJSON](http://geojson.org/) format.
+And a `location` object or array that contains one or more geometries in [GeoJSON](http://geojson.org/) format.
 
 It may also have the object value `custom` which may contain thing specific states.
