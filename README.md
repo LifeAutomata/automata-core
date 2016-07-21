@@ -45,3 +45,38 @@ This architecture provides for a huge amount of flexibility in designing automat
 
 The core project also provides a web server that can be used to expose a REST API interface
 for all installed moduled. As well as a job queue to ensure that automation events happen in order.
+
+## Events
+
+Events are the core concept of Life Automata. There are eight built-in events:
+
+- `plugins-loaded`
+- `paused`
+- `resumed`
+- `shutdown`
+- `device-added`
+- `device-removed`
+- `device-state-changed`
+- `api-called`
+
+All plugins should prefix their events with the plugin name.
+
+## Device State
+
+Device states should be an object. At the root level that object should only contain the following
+pre-defined boolean states:
+
+- `on`
+- `armed`
+- `open`
+- `locked`
+- `motion`
+
+And the following integer values:
+
+- `temperature`
+- `humidity`
+- `brightness`
+- `battery_level`
+
+It may also have the object value `device_defined` which may contain device specific states.
