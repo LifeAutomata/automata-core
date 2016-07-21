@@ -2,6 +2,34 @@
 
 The Life Automata Core provides an foundation on which other automation systems can be built.
 
+Example use cases include:
+
+- Home Automation
+  - Turn on the lights when your driveway door is closed
+  - Take a screen shot from a camera when an alarm goes off
+  - Turn on Christmas lights at sunset
+  - Notify you when you forget to close the garage
+  - Etc.
+- Quantified Home
+  - Keep a record of thermostat temperature
+  - Graph how much water the sprinklers use
+  - Get up-to-date information about your car
+  - Know when it is time to change the filter in the air conditional
+  - Etc.
+- Self Automation
+  - Auto-reply when a VIP sends you an email
+  - Alert you when a news article you care about is published
+  - Take action when someone posts something about you on Twitter
+  - Let you know when you should bring an umbrella
+  - Order pizza
+  - Etc.
+- Quantified Self
+  - Record and graph your weight
+  - Keep journal entries
+  - Track your steps
+  - Map your location
+  - Etc.
+
 The core itself contains utilities for managing automata, brokering messages, and providing a
 simple REST API.
 
