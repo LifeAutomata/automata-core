@@ -48,7 +48,7 @@ for all installed moduled. As well as a job queue to ensure that automation even
 
 ## Events
 
-Events are the core concept of Life Automata. There are ten built-in events:
+Events are the core concept of Life Automata. There are a handfull of built-in events:
 
 - `plugins-loaded`
 - `paused`
@@ -60,6 +60,9 @@ Events are the core concept of Life Automata. There are ten built-in events:
 - `thing-state-change-rejected`
 - `thing-state-changed`
 - `api-called`
+- `debug`
+- `info`
+- `error`
 
 All plugins should prefix their events with the plugin name.
 
