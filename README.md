@@ -54,9 +54,9 @@ Events are the core concept of Life Automata. There are eight built-in events:
 - `paused`
 - `resumed`
 - `shutdown`
-- `device-added`
-- `device-removed`
-- `device-state-changed`
+- `thing-added`
+- `thing-removed`
+- `thing-state-changed`
 - `api-called`
 
 All plugins should prefix their events with the plugin name.
@@ -72,11 +72,29 @@ pre-defined boolean states:
 - `locked`
 - `motion`
 
-And the following integer values:
+And the following metrics:
 
-- `temperature`
 - `humidity`
 - `brightness`
+- `weight`
 - `battery_level`
+- `temperature`
+
+Metrics must have the format:
+
+```
+{
+  "value": integer,
+  "units": string
+}
+```
+
+Units may be one of:
+
+- F (fahrenheit)
+- C (celsius)
+- Any standard metric units (m, cm, s, ms, etc)
+
+And a location object or array that contains one or more geometries in [GeoJSON](http://geojson.org/) format.
 
 It may also have the object value `device_defined` which may contain device specific states.
